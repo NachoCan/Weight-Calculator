@@ -1,20 +1,20 @@
 public class WeightCalculator
 {
-	public static void main (String[] args)
+	public static void main(String[] args)
 	{
-		int a = Integer.parseInt (args [0]);
-		
-		double b = Double.parseDouble (args[0]);
+		double weight = Double.parseDouble (args[0]);
 		
 		//output//
-		System.out.println(a);
 		
-		System.out.println("Mars:" + a * 0.38);
-		
-		System.out.println("Jupiter:" + b * 2.36);
-		
-		System.out.println("Venus:" + a *0.91);
-		
-		System.out.println("Saturn:" + b * 1.06);
+		printPlanet (weight, 0.38, "Mars");
+		printPlanet (weight, 2.36, "Jupiter");
+		printPlanet (weight, 0.91, "Venus");
+		printPlanet (weight, 1.06, "Saturn");
+	}
+
+	public static void printPlanet(double earth, double factor, String planet)
+	{
+	double weight = earth * factor;
+	System.out.println(planet + ": " + weight);
 	}
 }
